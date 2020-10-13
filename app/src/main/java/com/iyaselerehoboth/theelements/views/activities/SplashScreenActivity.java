@@ -1,4 +1,4 @@
-package com.iyaselerehoboth.theelements;
+package com.iyaselerehoboth.theelements.views.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.iyaselerehoboth.theelements.R;
 import com.iyaselerehoboth.theelements.databinding.ActivitySplashscreenBinding;
 
 public class SplashScreenActivity extends AppCompatActivity {

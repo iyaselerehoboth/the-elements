@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/overview"
+        android:id="@+id/overviewFragment"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Overview" />
     <item
-        android:id="@+id/category"
+        android:id="@+id/categoryFragment"
         android:icon="@drawable/ic_baseline_category_24"
         android:title="Categories" />
     <item
-        android:id="@+id/search"
+        android:id="@+id/searchFragment"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="Search" />
 </menu>

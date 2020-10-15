@@ -23,7 +23,6 @@ public class HomePageActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home_page);
         setUpNavigation();
 
-
     }
 
     public void setUpNavigation() {

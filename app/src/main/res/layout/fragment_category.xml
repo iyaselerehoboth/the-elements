@@ -1,13 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.fragments.CategoryFragment">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Category" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBlock"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Block"
+            app:icon="@drawable/ic_blocks"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/btnBondingType"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mtvHeadline"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBondingType"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Bonding Type"
+            app:icon="@drawable/ic_bonding"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/btnCrystalStructure"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBlock" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCrystalStructure"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Crystal Structure"
+            app:icon="@drawable/ic_crystal_structures"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBondingType" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            app:layout_constraintTop_toBottomOf="@id/mtvHeadline" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mtvHeadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Select Categorization"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGroupBlock"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Group Block"
+            app:icon="@drawable/ic_group_block"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/btnMagneticOrdering"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/mtvHeadline" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMagneticOrdering"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Magnetic Ordering"
+            app:icon="@drawable/ic_magnetic_ordering"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/btnPeriod"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btnGroupBlock" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPeriod"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Period"
+            app:icon="@drawable/ic_period"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btnMagneticOrdering" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

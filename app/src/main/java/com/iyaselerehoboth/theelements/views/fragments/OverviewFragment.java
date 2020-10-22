@@ -1,6 +1,5 @@
 package com.iyaselerehoboth.theelements.views.fragments;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +26,6 @@ public class OverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_overview, container, false);
 
         return binding.getRoot();

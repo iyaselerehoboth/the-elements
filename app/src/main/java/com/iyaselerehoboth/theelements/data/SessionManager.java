@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 
 public class SessionManager {
 
+    private static final String KEY_FILTER_CATEGORY = "filter_category";
+
     private static final String PREF_NAME = "TheElements Preferences";
     SharedPreferences prefs;
     SharedPreferences.Editor editor;
@@ -23,5 +25,17 @@ public class SessionManager {
      * ============================================================================
      */
 
+    public String GET_FILTER_CATEGORY() {
+        return prefs.getString(KEY_FILTER_CATEGORY, "");
+    }
 
+    /**
+     * ============================================================================
+     * KEEP ALL SESSION SETTERS BELOW THIS LINE
+     * ============================================================================
+     */
+
+    public void SET_FILTER_CATEGORY(String value) {
+        editor.putString(KEY_FILTER_CATEGORY, value).commit();
+    }
 }

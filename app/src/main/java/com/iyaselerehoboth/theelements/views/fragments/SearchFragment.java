@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,7 +18,7 @@ import com.iyaselerehoboth.theelements.data.SessionManager;
 import com.iyaselerehoboth.theelements.data.room.TheElementsDatabase;
 import com.iyaselerehoboth.theelements.databinding.FragmentSearchBinding;
 
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements SearchView.OnQueryTextListener {
     FragmentSearchBinding binding;
     SessionManager session;
     TheElementsDatabase db;
@@ -41,6 +42,8 @@ public class SearchFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.svElement.setOnQueryTextListener(this);
+
         db.getElementsDao().getAllElements().observe(getViewLifecycleOwner(), elementsList -> {
 
             adapter = new ElementsAdapter(getActivity(), elementsList, element -> {
@@ -50,5 +53,20 @@ public class SearchFragment extends Fragment {
             binding.rvElements.setLayoutManager(new LinearLayoutManager(getActivity()));
             binding.rvElements.setAdapter(adapter);
         });
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        try {
+            adapter.getFilter().filter(s.toLowerCase());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

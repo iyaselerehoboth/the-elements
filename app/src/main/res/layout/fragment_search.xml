@@ -20,7 +20,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
-                app:cardCornerRadius="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/rvElements"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +31,8 @@
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/svElement"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    app:iconifiedByDefault="false" />
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.recyclerview.widget.RecyclerView

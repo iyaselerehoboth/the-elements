@@ -34,5 +34,12 @@
             android:defaultValue="@null"
             app:argType="string"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_subCategoryFragment_to_categoryElementsFragment"
+            app:destination="@id/categoryElementsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/categoryElementsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.CategoryElementsFragment"
+        android:label="CategoryElementsFragment" />
 </navigation>

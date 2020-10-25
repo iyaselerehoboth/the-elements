@@ -35,4 +35,40 @@ public interface ElementsDAO {
 
     @Query("SELECT * FROM elements")
     LiveData<List<Elements>> getAllElements();
+
+    @Query("SELECT * FROM elements WHERE block = :subCategory")
+    List<Elements> getSubElementsBlocks(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE bonding_type = :subCategory")
+    List<Elements> getSubElementsBondingType(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE crystal_structure = :subCategory")
+    List<Elements> getSubElementsCrystalStructure(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE group_block = :subCategory")
+    List<Elements> getSubElementsGroupBlock(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE magnetic_ordering = :subCategory")
+    List<Elements> getSubElementsMagnetic(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE period = :subCategory")
+    List<Elements> getSubElementsPeriod(String subCategory);
+
+    @Query("SELECT * FROM elements WHERE period ISNULL")
+    List<Elements> getSubElementsPeriodNull();
+
+    @Query("SELECT * FROM elements WHERE block ISNULL")
+    List<Elements> getSubElementsBlocksNull();
+
+    @Query("SELECT * FROM elements WHERE bonding_type ISNULL")
+    List<Elements> getSubElementsBondingTypeNUll();
+
+    @Query("SELECT * FROM elements WHERE crystal_structure ISNULL")
+    List<Elements> getSubElementsCrystalStructureNull();
+
+    @Query("SELECT * FROM elements WHERE group_block ISNULL")
+    List<Elements> getSubElementsGroupBlockNull();
+
+    @Query("SELECT * FROM elements WHERE magnetic_ordering ISNULL")
+    List<Elements> getSubElementsMagneticNull();
 }

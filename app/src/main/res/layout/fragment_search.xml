@@ -31,8 +31,7 @@
                 <androidx.appcompat.widget.SearchView
                     android:id="@+id/svElement"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:iconifiedByDefault="false" />
+                    android:layout_height="match_parent" />
             </com.google.android.material.card.MaterialCardView>
 
             <androidx.recyclerview.widget.RecyclerView

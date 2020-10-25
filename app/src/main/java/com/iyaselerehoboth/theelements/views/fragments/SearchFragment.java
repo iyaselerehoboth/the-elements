@@ -44,6 +44,10 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
         binding.svElement.setOnQueryTextListener(this);
 
+        binding.svElement.setOnClickListener(v -> {
+            binding.svElement.setIconified(false);
+        });
+
         db.getElementsDao().getAllElements().observe(getViewLifecycleOwner(), elementsList -> {
 
             adapter = new ElementsAdapter(getActivity(), elementsList, element -> {
@@ -52,6 +56,7 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
 
             binding.rvElements.setLayoutManager(new LinearLayoutManager(getActivity()));
             binding.rvElements.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
         });
     }
 

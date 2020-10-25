@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.iyaselerehoboth.theelements.R;
@@ -57,11 +58,15 @@ public class SubCategoryFragment extends Fragment {
 
     public void initSubCategoryRecycler(String category) {
         adapter = new SubCategoryAdapter(getActivity(), getSubCategoryList(category), sub_category -> {
-            //
+            //Set Category and sub-category to shared preferences.
+            session.SET_FILTER_CATEGORY(category);
+            session.SET_FILTER_SUB_CATEGORY(sub_category);
+            Navigation.findNavController(getActivity(), R.id.navHostFragment).navigate(R.id.action_subCategoryFragment_to_categoryElementsFragment);
         });
 
         binding.rcvSubCategory.setLayoutManager(new LinearLayoutManager(getActivity()));
         binding.rcvSubCategory.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 
     public List<String> getSubCategoryList(String category) {

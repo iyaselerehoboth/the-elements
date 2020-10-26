@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.iyaselerehoboth.theelements.R;
@@ -51,7 +52,11 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
         db.getElementsDao().getAllElements().observe(getViewLifecycleOwner(), elementsList -> {
 
             adapter = new ElementsAdapter(getActivity(), elementsList, element -> {
-                //Navigate to single view
+                //Navigate to details view
+                SearchFragmentDirections.ActionSearchFragmentToElementDetailsFragment action
+                        = SearchFragmentDirections.actionSearchFragmentToElementDetailsFragment();
+                action.setAtomicNumber(element.getAtomic_number());
+                Navigation.findNavController(view).navigate(action);
             });
 
             binding.rvElements.setLayoutManager(new LinearLayoutManager(getActivity()));

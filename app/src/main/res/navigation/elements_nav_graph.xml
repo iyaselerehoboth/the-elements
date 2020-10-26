@@ -23,7 +23,11 @@
         android:id="@+id/searchFragment"
         android:name="com.iyaselerehoboth.theelements.views.fragments.SearchFragment"
         android:label="Search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_elementDetailsFragment"
+            app:destination="@id/elementDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/subCategoryFragment"
         android:name="com.iyaselerehoboth.theelements.views.fragments.SubCategoryFragment"
@@ -41,5 +45,18 @@
     <fragment
         android:id="@+id/categoryElementsFragment"
         android:name="com.iyaselerehoboth.theelements.views.fragments.CategoryElementsFragment"
-        android:label="CategoryElementsFragment" />
+        android:label="CategoryElementsFragment">
+        <action
+            android:id="@+id/action_categoryElementsFragment_to_elementDetailsFragment"
+            app:destination="@id/elementDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/elementDetailsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.ElementDetailsFragment"
+        android:label="ElementDetailsFragment">
+        <argument
+            android:name="atomicNumber"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
 </navigation>

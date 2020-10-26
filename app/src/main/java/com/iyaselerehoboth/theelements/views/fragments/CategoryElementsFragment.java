@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.iyaselerehoboth.theelements.R;
@@ -51,7 +52,11 @@ public class CategoryElementsFragment extends Fragment {
         sub_category = session.GET_FILTER_SUB_CATEGORY();
 
         adapter = new ElementsAdapter(getActivity(), getSubCategoryElementsList(category, sub_category), element -> {
-
+            //Navigate to details view
+            CategoryElementsFragmentDirections.ActionCategoryElementsFragmentToElementDetailsFragment action
+                    = CategoryElementsFragmentDirections.actionCategoryElementsFragmentToElementDetailsFragment();
+            action.setAtomicNumber(element.getAtomic_number());
+            Navigation.findNavController(view).navigate(action);
         });
 
         binding.rcCategoryElements.setLayoutManager(new LinearLayoutManager(getActivity()));

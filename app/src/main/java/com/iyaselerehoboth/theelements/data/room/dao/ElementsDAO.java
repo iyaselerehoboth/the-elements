@@ -71,4 +71,7 @@ public interface ElementsDAO {
 
     @Query("SELECT * FROM elements WHERE magnetic_ordering ISNULL")
     List<Elements> getSubElementsMagneticNull();
+
+    @Query("SELECT * FROM elements WHERE atomic_number = :atomicNo")
+    Elements getElementDetails(Integer atomicNo);
 }

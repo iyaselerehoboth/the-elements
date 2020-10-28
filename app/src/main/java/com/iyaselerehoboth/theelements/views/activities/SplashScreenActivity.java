@@ -29,7 +29,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashScreenActivity.this, HomePageActivity.class));
                 finish();
             }
-        }, 1500);
+        }, 2000);
 
     }
 }

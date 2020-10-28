@@ -6,9 +6,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         tools:context=".views.activities.SplashScreenActivity">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <!--<com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgViewSplashScreen"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -17,19 +18,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/img_5" />
+            app:srcCompat="@drawable/img_5" />-->
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgViewAppIcon"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_periodic_table"
-            app:layout_constraintBottom_toBottomOf="@+id/imgViewSplashScreen"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imgViewSplashScreen"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
             app:shapeAppearanceOverlay="@style/circleImageView" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -37,9 +38,10 @@
             style="@style/TextAppearance.MaterialComponents.Headline1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="The Elements"
+            android:textColor="@android:color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

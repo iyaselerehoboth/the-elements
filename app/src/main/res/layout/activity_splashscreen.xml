@@ -46,21 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgViewAppIcon" />
 
-        <Button
-            android:id="@+id/btnBegin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:padding="5dp"
-            android:text="Let's Begin"
-            android:textAllCaps="false"
-            app:cornerRadius="@dimen/mtrl_button_radius"
-            app:icon="@drawable/ic_baseline_arrow_right_alt_24"
-            app:iconGravity="textEnd"
-            app:layout_constraintBottom_toBottomOf="@+id/imgViewSplashScreen"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -92,7 +92,9 @@ public class ElementsAdapter extends RecyclerView.Adapter<ElementsAdapter.ViewHo
             super(binding.getRoot());
             this.binding = binding;
 
-            binding.getRoot().setOnClickListener(view -> listener.onClick(elementsList.get(getLayoutPosition())));
+            binding.getRoot().setOnClickListener(view -> {
+                listener.onClick(mFilteredList.get(getLayoutPosition()));
+            });
         }
 
         public void bind(Elements element) {

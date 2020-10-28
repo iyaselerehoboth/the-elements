@@ -94,6 +94,10 @@ public class Elements {
         return boiling_point;
     }
 
+    public String getCustomBoilingPoint() {
+        return boiling_point + "\u2103";
+    }
+
     public String getBonding_type() {
         return bonding_type;
     }
@@ -152,6 +156,10 @@ public class Elements {
 
     public String getMelting_point() {
         return melting_point;
+    }
+
+    public String getCustomMeltingPoint() {
+        return melting_point + "\u2103";
     }
 
     public String getMolar_heat_capacity() {

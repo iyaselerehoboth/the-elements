@@ -77,7 +77,7 @@ public class ElementDetailsFragment extends Fragment {
         binding.mtvAtomicMass.setText(selected.getAtomic_mass());
         binding.mtvAtomicRadius.setText(String.valueOf(selected.getAtomic_radius()));
         binding.mtvBlock.setText(selected.getBlock());
-        binding.mtvBoilingPoint.setText(String.valueOf(selected.getBoiling_point()));
+        binding.mtvBoilingPoint.setText(selected.getCustomBoilingPoint());
         binding.mtvCrystalStructure.setText(selected.getCrystal_structure());
         binding.mtvDensity.setText(selected.getDensity());
         binding.mtvElectronAffinity.setText(String.valueOf(selected.getElectron_affinity()));
@@ -85,13 +85,12 @@ public class ElementDetailsFragment extends Fragment {
         binding.mtvElectronicConfiguration.setText(selected.getElectronic_configuration());
         binding.mtvGroupBlock.setText(selected.getGroup_block());
         binding.mtvMagneticOrdering.setText(selected.getMagnetic_ordering());
-        binding.mtvMeltingPoint.setText(selected.getMelting_point());
+        binding.mtvMeltingPoint.setText(selected.getCustomMeltingPoint());
         binding.mtvOxidationState.setText(selected.getOxidation_states());
         binding.mtvStandardState.setText(selected.getStandard_state());
         binding.mtvYear.setText(selected.getYear_discovered());
 
         binding.mtvIsotopes.setText(Html.fromHtml(selected.getIsotopes(), Html.FROM_HTML_MODE_LEGACY));
-
         binding.mtvHistory.setText(Html.fromHtml(selected.getHistory(), Html.FROM_HTML_MODE_LEGACY));
     }
 }

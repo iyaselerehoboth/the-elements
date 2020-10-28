@@ -39,4 +39,9 @@ public class HomePageActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        return Navigation.findNavController(this, R.id.navHostFragment).navigateUp()
+                || super.onSupportNavigateUp();
+    }
 }

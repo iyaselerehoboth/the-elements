@@ -186,6 +186,10 @@ public class Elements {
         return standard_state;
     }
 
+    public String getCustomStandardState() {
+        return standard_state.substring(0, 1).toUpperCase() + standard_state.substring(1).toLowerCase();
+    }
+
     public String getSymbol() {
         return symbol;
     }

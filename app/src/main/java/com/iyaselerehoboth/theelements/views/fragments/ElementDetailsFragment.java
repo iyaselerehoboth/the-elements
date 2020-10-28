@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -59,7 +58,7 @@ public class ElementDetailsFragment extends Fragment {
     public void setUpViews(Elements selected) {
         //Set all views.
         Log.d("CHECK", "" + selected.getName());
-        Toast.makeText(getActivity(), " " + selected.getName(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getActivity(), " " + selected.getName(), Toast.LENGTH_LONG).show();
 
         binding.symbolLayout.setBackgroundColor(Color.parseColor("#" + selected.getCpk_hex_color()));
 
@@ -87,7 +86,7 @@ public class ElementDetailsFragment extends Fragment {
         binding.mtvMagneticOrdering.setText(selected.getMagnetic_ordering());
         binding.mtvMeltingPoint.setText(selected.getCustomMeltingPoint());
         binding.mtvOxidationState.setText(selected.getOxidation_states());
-        binding.mtvStandardState.setText(selected.getStandard_state());
+        binding.mtvStandardState.setText(selected.getCustomStandardState());
         binding.mtvYear.setText(selected.getYear_discovered());
 
         binding.mtvIsotopes.setText(Html.fromHtml(selected.getIsotopes(), Html.FROM_HTML_MODE_LEGACY));

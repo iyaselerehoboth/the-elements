@@ -101,7 +101,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -127,7 +127,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -153,7 +153,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -179,7 +179,33 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bondingTypeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvSubTitle41"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bonding Type:"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvBondingType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -205,7 +231,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -231,7 +257,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -257,7 +283,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -283,7 +309,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -309,7 +335,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -335,7 +361,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -363,7 +389,7 @@
                         android:layout_weight="1"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -389,7 +415,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -415,7 +441,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -441,7 +467,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -468,7 +494,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:inputType="textCapSentences"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -494,7 +520,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
 
                 <com.google.android.material.textview.MaterialTextView

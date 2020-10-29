@@ -57,8 +57,6 @@ public class ElementDetailsFragment extends Fragment {
 
     public void setUpViews(Elements selected) {
         //Set all views.
-        Log.d("CHECK", "" + selected.getName());
-        //Toast.makeText(getActivity(), " " + selected.getName(), Toast.LENGTH_LONG).show();
 
         binding.symbolLayout.setBackgroundColor(Color.parseColor("#" + selected.getCpk_hex_color()));
 
@@ -77,6 +75,7 @@ public class ElementDetailsFragment extends Fragment {
         binding.mtvAtomicRadius.setText(String.valueOf(selected.getAtomic_radius()));
         binding.mtvBlock.setText(selected.getBlock());
         binding.mtvBoilingPoint.setText(selected.getCustomBoilingPoint());
+        binding.mtvBondingType.setText(selected.getBonding_type());
         binding.mtvCrystalStructure.setText(selected.getCrystal_structure());
         binding.mtvDensity.setText(selected.getDensity());
         binding.mtvElectronAffinity.setText(String.valueOf(selected.getElectron_affinity()));
@@ -87,9 +86,18 @@ public class ElementDetailsFragment extends Fragment {
         binding.mtvMeltingPoint.setText(selected.getCustomMeltingPoint());
         binding.mtvOxidationState.setText(selected.getOxidation_states());
         binding.mtvStandardState.setText(selected.getCustomStandardState());
-        binding.mtvYear.setText(selected.getYear_discovered());
+        binding.mtvYear.setText(selected.getYear_discovered() + " AD");
 
         binding.mtvIsotopes.setText(Html.fromHtml(selected.getIsotopes(), Html.FROM_HTML_MODE_LEGACY));
         binding.mtvHistory.setText(Html.fromHtml(selected.getHistory(), Html.FROM_HTML_MODE_LEGACY));
+
+
+        Log.d("CHECK", "Standard State: ========> " + selected.getCustomStandardState());
+
+        Log.d("CHECK", "Year: ========> " + selected.getYear_discovered());
+
+        Log.d("CHECK", "Isotopes: ========> " + selected.getIsotopes());
+
+        Log.d("CHECK", "History: ========> " + selected.getHistory());
     }
 }

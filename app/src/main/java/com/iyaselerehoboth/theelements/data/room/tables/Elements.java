@@ -83,10 +83,16 @@ public class Elements {
     }
 
     public Integer getAtomic_radius() {
+        if (atomic_radius == null) {
+            return 0;
+        }
         return atomic_radius;
     }
 
     public String getBlock() {
+        if (block == null) {
+            return "N/A";
+        }
         return block;
     }
 
@@ -95,10 +101,16 @@ public class Elements {
     }
 
     public String getCustomBoilingPoint() {
+        if (boiling_point == null) {
+            return "N/A";
+        }
         return boiling_point + "\u2103";
     }
 
     public String getBonding_type() {
+        if (bonding_type == null) {
+            return "N/A";
+        }
         return bonding_type;
     }
 
@@ -107,18 +119,30 @@ public class Elements {
     }
 
     public String getCrystal_structure() {
+        if (crystal_structure == null) {
+            return "N/A";
+        }
         return crystal_structure;
     }
 
     public String getDensity() {
+        if (density == null) {
+            return "N/A";
+        }
         return density;
     }
 
     public Integer getElectron_affinity() {
+        if (electron_affinity == null) {
+            return 0;
+        }
         return electron_affinity;
     }
 
     public String getElectronegativity() {
+        if (electronegativity == null) {
+            return "N/A";
+        }
         return electronegativity;
     }
 
@@ -131,6 +155,9 @@ public class Elements {
     }
 
     public String getGroup() {
+        if (group == null) {
+            return "N/A";
+        }
         return group;
     }
 
@@ -151,6 +178,9 @@ public class Elements {
     }
 
     public String getMagnetic_ordering() {
+        if (magnetic_ordering == null) {
+            return "N/A";
+        }
         return magnetic_ordering;
     }
 
@@ -159,6 +189,9 @@ public class Elements {
     }
 
     public String getCustomMeltingPoint() {
+        if (melting_point == null) {
+            return "N/A";
+        }
         return melting_point + "\u2103";
     }
 
@@ -171,6 +204,9 @@ public class Elements {
     }
 
     public String getOxidation_states() {
+        if (oxidation_states == null) {
+            return "N/A";
+        }
         return oxidation_states;
     }
 
@@ -187,6 +223,9 @@ public class Elements {
     }
 
     public String getCustomStandardState() {
+        if (standard_state == null) {
+            return "N/A";
+        }
         return standard_state.substring(0, 1).toUpperCase() + standard_state.substring(1).toLowerCase();
     }
 

@@ -9,7 +9,11 @@
         android:id="@+id/overviewFragment"
         android:name="com.iyaselerehoboth.theelements.views.fragments.OverviewFragment"
         android:label="Overview"
-        tools:layout="@layout/fragment_overview" />
+        tools:layout="@layout/fragment_overview">
+        <action
+            android:id="@+id/action_overviewFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.iyaselerehoboth.theelements.views.fragments.CategoryFragment"
@@ -59,4 +63,9 @@
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
 </navigation>

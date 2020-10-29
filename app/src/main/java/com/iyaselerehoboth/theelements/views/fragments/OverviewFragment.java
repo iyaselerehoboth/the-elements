@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 import com.iyaselerehoboth.theelements.BuildConfig;
@@ -44,6 +45,9 @@ public class OverviewFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.item_about:
                 displayAboutDialog();
+                break;
+            case R.id.item_contact:
+                Navigation.findNavController(getActivity(), R.id.navHostFragment).navigate(R.id.action_overviewFragment_to_contactUsFragment);
                 break;
             default:
                 break;

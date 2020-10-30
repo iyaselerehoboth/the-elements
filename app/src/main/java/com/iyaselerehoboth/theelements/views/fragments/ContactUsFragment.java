@@ -35,9 +35,6 @@ public class ContactUsFragment extends Fragment {
 
         binding.mtvProfileName.setText("Iyasele Rehoboth");
         binding.mtvProfileRole.setText("Mobile Developer");
-        binding.mtvAboutMe.setText("Hi," + "\n" +
-                "I am a mobile applications software developer based in Lagos, Nigeria. " +
-                "Proficient in Native Android development (Java & Kotlin), Git, Material Design, Android Architecture Components, Database management, Writing and Consumption of Web APIs & general Back-end development." +
-                "When I am not coding, I am either reading, visiting friends or playing video games (and sleeping)");
+
     }
 }

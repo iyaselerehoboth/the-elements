@@ -8,5 +8,6 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/item_contact"
-        android:title="Contact Us" />
+        android:title="Contact Us"
+        android:visible="false" />
 </menu>

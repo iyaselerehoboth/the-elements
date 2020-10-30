@@ -64,34 +64,159 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mtvProfileName" />
 
-            <LinearLayout
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:text="Skills:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgViewContactBanner" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/skillsChipGroup"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/rounded_corners"
-                android:orientation="vertical"
-                android:padding="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgViewContactBanner">
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipJava"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="About Me:"
-                    android:textStyle="bold" />
+                    android:text="Java"
+                    app:chipIcon="@drawable/ic_java" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/mtvAboutMe"
-                    android:layout_width="match_parent"
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipKotlin"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="This is my about me textview" />
+                    android:text="Kotlin"
+                    app:chipIcon="@drawable/ic_icons8_kotlin" />
 
-            </LinearLayout>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipXml"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XML Design"
+                    app:chipIcon="@drawable/ic_xml_icon" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGit"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Git"
+                    app:chipIcon="@drawable/ic_git_icon" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipNative"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Native Android"
+                    app:chipIcon="@drawable/ic_android_icon" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMySql"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MySQL"
+                    app:chipIcon="@drawable/ic_mysql_icon" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPhpMyAdmin"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="phpMyAdmin"
+                    app:chipIcon="@drawable/ic_phpmyadmin_icon" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMaterial"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Material Design" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipArchitecture"
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Architecture Components" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
+                android:text="Contact:"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/skillsChipGroup" />
+
+            <ImageButton
+                android:id="@+id/imgBtnGithub"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_github"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnPhone"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <ImageButton
+                android:id="@+id/imgBtnEmail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgBtnPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <ImageButton
+                android:id="@+id/imgBtnPhone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_phone_call"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnEmail"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgBtnGithub"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

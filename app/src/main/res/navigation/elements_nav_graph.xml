@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/elements_nav_graph"
+    app:startDestination="@id/overviewFragment">
+
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.OverviewFragment"
+        android:label="Overview"
+        tools:layout="@layout/fragment_overview">
+        <action
+            android:id="@+id/action_overviewFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.CategoryFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_subCategoryFragment"
+            app:destination="@id/subCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_elementDetailsFragment"
+            app:destination="@id/elementDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subCategoryFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.SubCategoryFragment"
+        android:label="Sub-Category"
+        tools:layout="@layout/fragment_sub_category">
+        <argument
+            android:name="category"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_subCategoryFragment_to_categoryElementsFragment"
+            app:destination="@id/categoryElementsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryElementsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.CategoryElementsFragment"
+        android:label="Sub-category Elements">
+        <action
+            android:id="@+id/action_categoryElementsFragment_to_elementDetailsFragment"
+            app:destination="@id/elementDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/elementDetailsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.ElementDetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="atomicNumber"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.iyaselerehoboth.theelements.views.fragments.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+</navigation>

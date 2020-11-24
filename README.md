@@ -8,6 +8,8 @@ Android mobile application designed to help teach and master the Inorganic Chemi
 * View the various categories in which the elements can be grouped and view al elements under each category.
 * Search and view all properties of each element.
 
+### Download Link:
+https://drive.google.com/file/d/1UznOMxtz1MBmQks1-c_M3HlEwLpMdV9p/view?usp=sharing
 
 ### Screenshots:
 <p align="middle">
